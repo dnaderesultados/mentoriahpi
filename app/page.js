@@ -79,7 +79,7 @@ export default function Home() {
         </h2>
         <div className="flex justify-center">
           <video controls className="rounded-xl w-full max-w-sm">
-            <source src="/videos/IMG_3494.Mp4" type="video/mp4" />
+            <source src="/videos/IMG_3494.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
         </div>
@@ -146,7 +146,7 @@ export default function Home() {
             {/* Imagem */}
             <div className="relative w-full md:w-1/3 aspect-[3/4] md:h-auto">
               <Image
-                src="/images/ReisFoto.jpg"
+                src="/images/Reisfoto.jpg"
                 alt="Daniel Reis"
                 fill
                 className="object-cover"
