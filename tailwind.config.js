@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        biorhyme: "var(--font-biorhyme)",
+        chivo: "var(--font-chivo)",
+        montserrat: "var(--font-montserrat)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

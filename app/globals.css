@@ -3,21 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #000000;
+  --foreground: #ffffff;
+  --highlight: #f97316;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-biorhyme: 'BioRhyme', serif;
+  --font-chivo: 'Chivo', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat, Arial, sans-serif);
+}
+
+.font-biorhyme {
+  font-family: var(--font-biorhyme);
+}
+
+.font-chivo {
+  font-family: var(--font-chivo);
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
 }
 
 @layer utilities {
