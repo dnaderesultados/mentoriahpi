@@ -253,6 +253,7 @@ export default function Home() {
                   <li>Unleash the Power Within - Londres (ING)</li>
                   <li>Método Treinador Implacável (Grupo Karcher)</li>
                   <li>Analista DISC (AIC)</li>
+                  <li>Treinador Experencial (Grupo Karcher)</li>
                 </ul>
               </div>
 
@@ -265,7 +266,6 @@ export default function Home() {
                   <li>Criador do Método Aureum - Elite da Liderança Emocional e Estratégia</li>
                   <li>Criador do Método LeaderPRO - Professional Leadership</li>
                   <li>Criador do Método Level Up Day - Imersão Corporativa</li>
-                  <li>Treinador Experencial (Grupo Karcher)</li>
                 </ul>
               </div>
             </div>
