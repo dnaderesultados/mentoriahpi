@@ -281,13 +281,10 @@ export default function Home() {
         </h2>
         <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/Videohugo1.mp4" type="video/mp4" />
+            <source src="/videos/Video7.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videoreis.mp4" type="video/mp4" />
-          </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/Videohugo2.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video1.mp4" type="video/mp4" />
@@ -305,16 +302,19 @@ export default function Home() {
             <source src="/videos/Video6.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/Video7.mp4" type="video/mp4" />
-          </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video8.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video9.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/Videohugo1.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video10.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/Videohugo2.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video11.mp4" type="video/mp4" />
