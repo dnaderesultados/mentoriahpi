@@ -79,7 +79,7 @@ export default function Home() {
         </h2>
         <div className="flex justify-center">
           <video controls className="rounded-xl w-full max-w-sm">
-            <source src="/videos/IMG_3494.mp4" type="video/mp4" />
+            <source src="/videos/Videointro.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
         </div>
@@ -175,6 +175,7 @@ export default function Home() {
                   <li>20 anos de mercado imobiliário</li>
                   <li>Líder que formou mais de 1200 corretores</li>
                   <li>1.5 bilhão em VGV</li>
+                  <li>Sócio fundador Home Class. (Imobiliária com 100 corretores no modelo digital posicionada para o alto padrão)</li>
                   <li>Especialista em carreiras de alta performance</li>
                   <li>Formação de líderes e diretores executivos</li>
                   <li>Fundador Adão Vibe (VGB 404 Milhões)</li>
@@ -289,37 +290,37 @@ export default function Home() {
             <source src="/videos/Videohugo2.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7317.mp4" type="video/mp4" />
+            <source src="/videos/Video1.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7299.mp4" type="video/mp4" />
+            <source src="/videos/Video2.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7300.mp4" type="video/mp4" />
+            <source src="/videos/Video3.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7301.mp4" type="video/mp4" />
+            <source src="/videos/Video4.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7304.mp4" type="video/mp4" />
+            <source src="/videos/Video5.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7305.mp4" type="video/mp4" />
+            <source src="/videos/Video6.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7308.mp4" type="video/mp4" />
+            <source src="/videos/Video7.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7309.mp4" type="video/mp4" />
+            <source src="/videos/Video8.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7310.mp4" type="video/mp4" />
+            <source src="/videos/Video9.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7313.mp4" type="video/mp4" />
+            <source src="/videos/Video10.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/IMG_7315.mp4" type="video/mp4" />
+            <source src="/videos/Video11.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videohugo3.mp4" type="video/mp4" />
