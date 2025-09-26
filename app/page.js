@@ -302,9 +302,6 @@ export default function Home() {
             <source src="/videos/Video4.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
-            <source src="/videos/Video5.mp4" type="video/mp4" />
-          </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video6.mp4" type="video/mp4" />
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
