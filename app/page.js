@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faBuilding, faClock, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const videoRef = useRef(null);
   const pixKey = "00020101021226840014BR.GOV.BCB.PIX0136bfda72e0-012d-4ae3-8e2d-60e624ab38d80222Pagamento hugoalmeidac5204000053039865406197.005802BR5925HUGO DE ALMEIDA BARBOSA 96007GOIANIA62290525QRCCVVF4yXTXfnbi2jRbPjDBp6304F840";
 
   const copyPix = () => {
@@ -37,6 +38,19 @@ export default function Home() {
       alert("Erro ao enviar, tente novamente.");
     }
   };
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const handleLoaded = () => {
+        video.currentTime = 5; // mostra o frame de 5 segundos
+      };
+      video.addEventListener("loadedmetadata", handleLoaded);
+
+      return () => {
+        video.removeEventListener("loadedmetadata", handleLoaded);
+      };
+    }
+  }, []);
   return (
     <main className="bg-black text-white">
       {/* 1. Topo */}
@@ -78,7 +92,7 @@ export default function Home() {
           Assista ao vídeo
         </h2>
         <div className="flex justify-center">
-          <video controls className="rounded-xl w-full max-w-sm">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm">
             <source src="/videos/Videointro.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
@@ -212,7 +226,7 @@ export default function Home() {
                 src="/images/Hugofoto.jpg"
                 alt="Hugo Almeida"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
 
@@ -280,46 +294,46 @@ export default function Home() {
           O que esperar deste evento
         </h2>
         <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video7.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videoreis.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video1.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video2.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video3.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video4.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video6.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video8.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video9.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videohugo1.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video10.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videohugo2.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Video11.mp4" type="video/mp4" />
           </video>
-          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videohugo3.mp4" type="video/mp4" />
           </video>
         </div>
