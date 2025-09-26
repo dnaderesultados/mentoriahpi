@@ -38,18 +38,23 @@ export default function Home() {
       alert("Erro ao enviar, tente novamente.");
     }
   };
-  useEffect(() => {
+   useEffect(() => {
     const video = videoRef.current;
-    if (video) {
-      const handleLoaded = () => {
-        video.currentTime = 5; // mostra o frame de 5 segundos
-      };
-      video.addEventListener("loadedmetadata", handleLoaded);
+    if (!video) return;
 
-      return () => {
-        video.removeEventListener("loadedmetadata", handleLoaded);
-      };
-    }
+    // força o preload completo do vídeo
+    video.preload = "auto";
+
+    const handleCanPlay = () => {
+      // pula para 5 segundos
+      video.currentTime = 5;
+      // pausa para não tocar automaticamente
+      video.pause();
+    };
+
+    video.addEventListener("canplay", handleCanPlay);
+
+    return () => video.removeEventListener("canplay", handleCanPlay);
   }, []);
   return (
     <main className="bg-black text-white">
