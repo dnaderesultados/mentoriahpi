@@ -278,7 +278,7 @@ export default function Home() {
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6 font-biorhyme">
           O que esperar deste evento
         </h2>
-        <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+        <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videohugo1.mp4" type="video/mp4" />
           </video>
@@ -287,6 +287,42 @@ export default function Home() {
           </video>
           <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
             <source src="/videos/Videohugo2.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7317.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7299.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7300.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7301.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7304.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7305.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7308.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7309.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7310.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7313.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/IMG_7315.mp4" type="video/mp4" />
+          </video>
+          <video controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+            <source src="/videos/Videohugo3.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
