@@ -44,7 +44,7 @@ export default function Home() {
         {/* Container da imagem */}
         <div className="w-full">
           <Image
-            src="/images/DNA-FEED (1).png"
+            src="/images/DNA-FEED (3).png"
             alt="DNA de Vendas Imobiliárias"
             width={1920}
             height={1080}
