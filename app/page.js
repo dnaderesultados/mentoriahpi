@@ -38,7 +38,7 @@ export default function Home() {
       alert("Erro ao enviar, tente novamente.");
     }
   };
-   useEffect(() => {
+  useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
@@ -220,6 +220,61 @@ export default function Home() {
                   <li>Treinamentos mercado de luxo - Miami</li>
                 </ul>
               </div>
+
+              {/* Métodos e Conquistas */}
+              <div>
+                <h4 className="text-xl font-semibold text-white mb-2">Métodos & Conquistas</h4>
+                <ul className="list-disc list-inside text-gray-400 font-chivo space-y-2">
+                  <li>
+                    <strong>Método Antecipação de lançamento Fire</strong> —
+                    Crie desejo antes do lançamento e transforme expectativa em vendas imediatas.
+                  </li>
+                  <li>
+                    <strong>Método Venda de Alto Impacto</strong> —
+                    Técnicas que aceleram negociações e levam o cliente ao fechamento sem objeções.
+                  </li>
+                  <li>
+                    <strong>Método Luxury Cliente</strong> —
+                    Atenda clientes de alto luxo com exclusividade, sofisticação e experiências únicas.
+                  </li>
+                  <li>
+                    <strong>Método Performance+</strong> —
+                    Transforme sua equipe em uma máquina de vendas com foco em resultado real.
+                  </li>
+                  <li>
+                    <strong>Método Potencial Máximo</strong> —
+                    Descubra e explore o melhor de cada corretor, elevando sua performance ao topo.
+                  </li>
+                  <li>
+                    <strong>Método Líder Alfa</strong> —
+                    Formação de líderes que inspiram, engajam e conduzem times de alta performance.
+                  </li>
+                  <li>
+                    <strong>Método Executivo Visionário</strong> —
+                    Construa uma carreira sólida de diretor executivo com visão, autoridade e estratégia.
+                  </li>
+                  <li>
+                    <strong>Método Imobiliária Zero a Cem</strong> —
+                    Passo a passo para abrir e escalar uma imobiliária sólida e lucrativa do zero.
+                  </li>
+                  <li>
+                    <strong>Método Carreira 20/20</strong> —
+                    Como se manter por 20 anos no topo da carreira com performance consistente.
+                  </li>
+                  <li>
+                    <strong>Método DISC & Eneagrama Pro</strong> —
+                    Use ferramentas comportamentais para liderar corretores, gestores e executivos.
+                  </li>
+                  <li>
+                    <strong>Método RH 360°®</strong> —
+                    Transforme o RH da sua imobiliária em motor de crescimento e retenção de talentos.
+                  </li>
+                  <li>
+                    <strong>Método Executivo Imob®</strong> —
+                    Leve seu time ao próximo nível: de corretores comuns a executivos de impacto.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -281,11 +336,11 @@ export default function Home() {
               <div>
                 <h4 className="text-xl font-semibold text-white mb-2">Métodos & Conquistas</h4>
                 <ul className="list-disc list-inside text-gray-400 font-chivo space-y-1">
-                  <li>Criador do método Vendedor de Sucesso</li>
-                  <li>Criador do método Fortium - Liderança Emocional e Alta Performance</li>
-                  <li>Criador do Método Aureum - Elite da Liderança Emocional e Estratégia</li>
-                  <li>Criador do Método LeaderPRO - Professional Leadership</li>
-                  <li>Criador do Método Level Up Day - Imersão Corporativa</li>
+                  <li>Criador do método <strong>Vendedor de Sucesso</strong></li>
+                  <li>Criador do método Fortium - <strong>Liderança Emocional e Alta Performance</strong></li>
+                  <li>Criador do Método Aureum - <strong>Elite da Liderança Emocional e Estratégia</strong></li>
+                  <li>Criador do Método LeaderPRO - <strong>Professional Leadership</strong></li>
+                  <li>Criador do Método Level Up Day - <strong>Imersão Corporativa</strong></li>
                 </ul>
               </div>
             </div>
