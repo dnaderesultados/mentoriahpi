@@ -53,14 +53,11 @@ export default function RootLayout({ children }) {
             fbq('track', 'PageView');
           `}
         </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=696320590145627&ev=PageView&noscript=1"
-          />
-        </noscript>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=696320590145627&ev=PageView&noscript=1" />`,
+          }}
+        />
       </head>
       <body
         className={`${bioRhyme.variable} ${chivo.variable} ${montserrat.variable} antialiased`}
