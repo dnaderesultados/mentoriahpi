@@ -35,26 +35,14 @@ export default function Home() {
     if (res.ok) {
       setShowModal(true);
 
-    //  Pixel do navegador
-    if (typeof window.fbq === "function") {
-      window.fbq("track", "Lead");
+      //  Pixel do navegador
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Lead");
+      }
+    } else {
+      alert("Erro ao enviar, tente novamente.");
     }
-
-    //  API de Conversão no servidor
-    await fetch("/api/conversion", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        event_name: "Lead",
-        nome: data.nome,
-        email: data.email,
-        telefone: data.telefone,
-      }),
-    });
-  } else {
-    alert("Erro ao enviar, tente novamente.");
-  }
-};
+  };
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
