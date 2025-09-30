@@ -133,7 +133,7 @@ export default function Home() {
             <FontAwesomeIcon icon={faMapMarkerAlt} className="w-5 h-5" /> Primavera do Leste - Mato Grosso
           </div>
           <div className="bg-black bg-opacity-60 border border-orange-500 rounded-lg p-4 text-white min-w-[180px] flex items-center gap-2 justify-center">
-            <FontAwesomeIcon icon={faBuilding} className="w-5 h-5" /> Auditório do Sicred
+            <FontAwesomeIcon icon={faBuilding} className="w-5 h-5" /> Primacredi Auditório
           </div>
           <div className="bg-black bg-opacity-60 border border-orange-500 rounded-lg p-4 text-white min-w-[180px] flex items-center gap-2 justify-center">
             <FontAwesomeIcon icon={faClock} className="w-5 h-5" /> 08:00 às 20h
