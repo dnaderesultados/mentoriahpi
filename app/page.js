@@ -359,46 +359,46 @@ export default function Home() {
           O que esperar deste evento
         </h2>
         <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfotohavan.jpeg">
             <source src="/videos/Video7.mp4" type="video/mp4" />
           </video>
           <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
             <source src="/videos/Videoreis.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto3.jpeg">
             <source src="/videos/Video1.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto4.jpeg">
             <source src="/videos/Video2.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto5.jpeg">
             <source src="/videos/Video3.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto6.jpeg">
             <source src="/videos/Video4.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto7.jpeg">
             <source src="/videos/Video6.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto8.jpeg">
             <source src="/videos/Video8.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto2.jpeg">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Reisfoto9.jpeg">
             <source src="/videos/Video9.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Hugofoto2.png">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Hugofoto2.jpg">
             <source src="/videos/Videohugo1.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Nayara.jpeg">
             <source src="/videos/Video10.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Hugofoto2.png">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Hugofoto2.jpg">
             <source src="/videos/Videohugo2.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Nayara2.jpeg">
             <source src="/videos/Video11.mp4" type="video/mp4" />
           </video>
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Hugofoto2.png">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-md h-60 md:h-72" poster="/images/Hugofoto2.jpg">
             <source src="/videos/Videohugo3.mp4" type="video/mp4" />
           </video>
         </div>
