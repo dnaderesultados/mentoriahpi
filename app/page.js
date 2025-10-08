@@ -5,11 +5,14 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faBuilding, faClock, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import CountdownTimer from './CountdownTimer';
 
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const videoRef = useRef(null);
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const formRef = useRef(null);
   const pixKey = "00020101021226840014BR.GOV.BCB.PIX0136bfda72e0-012d-4ae3-8e2d-60e624ab38d80222Pagamento hugoalmeidac5204000053039865406197.005802BR5925HUGO DE ALMEIDA BARBOSA 96007GOIANIA62290525QRCCVVF4yXTXfnbi2jRbPjDBp6304F840";
 
   const copyPix = () => {
@@ -61,6 +64,30 @@ export default function Home() {
 
     return () => video.removeEventListener("canplay", handleCanPlay);
   }, []);
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1, 
+    };
+
+    const observerCallback = (entries) => {
+      const [entry] = entries;
+      setIsFormVisible(entry.isIntersecting);
+    };
+
+    const observer = new IntersectionObserver(observerCallback, options);
+
+    if (formRef.current) {
+      observer.observe(formRef.current);
+    }
+
+    return () => {
+      if (formRef.current) {
+        observer.unobserve(formRef.current);
+      }
+    };
+  }, []);
   return (
     <main className="bg-black text-white">
       {/* 1. Topo */}
@@ -77,21 +104,32 @@ export default function Home() {
           />
         </div>
       </section>
-      {/* 2. Informações principais */}
+      {/* 2. Informações principais ATUALIZADAS */}
       <section className="py-8 px-6 text-center bg-black">
-        <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6 font-biorhyme">
-          DNA DE NEGÓCIOS IMOBILIÁRIOS
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4 font-biorhyme">
+          O Segredo do $1.5 Bilhão em VGV
         </h2>
+        <p className="text-xl md:text-2xl text-gray-200 mb-8 font-chivo max-w-3xl mx-auto">
+          A Imersão Que Vai Desbloquear Sua Alta Performance na Carreira Imobiliária.
+        </p>
+
+        {/* 1. TIMER DINÂMICO APLICADO */}
+        <CountdownTimer />
+
         <ul className="space-y-3 text-lg font-chivo">
-          <li>🔸 APRENDA A CONSTRUIR UMA CARREIRA COM ALTA PERFORMANCE CONSTANTE.</li>
-          <li>🔸 Performance está batendo na sua porta agora, não fique de fora.</li>
           <li className="text-2xl font-bold text-orange-400">
             De <span className="line-through text-gray-400">R$ 897,00</span> por <span className="text-white">R$ 197,00</span>
           </li>
+          <li>
+            <p className="text-lg font-bold text-yellow-400">
+              ⚠️ <strong>Últimas Vagas</strong> por este valor promocional!
+            </p>
+          </li>
         </ul>
+
         <a
           href="#inscricao"
-          className="mt-8 inline-block bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl text-lg transition font-montserrat font-bold"
+          className="mt-8 inline-block bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl text-xl transition font-montserrat font-bold animate-pulse-cta"
         >
           Garantir minha vaga!
         </a>
@@ -99,10 +137,10 @@ export default function Home() {
 
       <section className="pb-8 px-6 bg-black text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6 font-biorhyme">
-          Assista ao vídeo
+          Veja o que Daniel Reis e Hugo Almeida Vão Te Ensinar na Imersão:
         </h2>
         <div className="flex justify-center">
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm"  poster="/images/DNA-FEED (3).png">
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm" poster="/images/DNA-FEED (3).png">
             <source src="/videos/Videointro.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
@@ -142,6 +180,17 @@ export default function Home() {
             <FontAwesomeIcon icon={faCalendarAlt} className="w-5 h-5" /> 14/10/25
           </div>
         </div>
+        {/* DESTAQUE ADICIONADO AQUI */}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-bold text-white font-biorhyme">
+            <span className="text-orange-500">12 horas de Imersão Total</span><br />
+            Das 08h às 20h
+          </h3>
+          <p className="mt-4 text-lg text-gray-300 font-chivo">
+            Aproveite um dia inteiro de conteúdo transformador para sua carreira
+            pelo valor promocional de <span className="font-bold text-orange-500">apenas R$ 197</span>.
+          </p>
+        </div>
       </section>
       {/* 4. Informações mais completas */}
       <section className="py-12 px-6 bg-black text-center">
@@ -158,13 +207,14 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* 5. Palestrantes */}
+      {/* 5. Palestrantes (Versão Estratégica) */}
       <section className="py-12 px-6 bg-gray-900">
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-12 text-center font-biorhyme">
-          Palestrantes
+          Seus Mentores na Imersão
         </h2>
 
-        <div className="flex flex-col space-y-12">
+        <div className="flex flex-col gap-12">
+
           {/* Palestrante 1: Daniel Reis */}
           <div className="flex flex-col md:flex-row bg-black rounded-xl shadow-lg overflow-hidden">
             {/* Imagem */}
@@ -177,107 +227,38 @@ export default function Home() {
               />
             </div>
 
-            {/* Info */}
-            <div className="p-6 flex flex-col justify-start md:w-2/3 text-left space-y-4">
-              <div className="flex items-center space-x-3">
-                <h3 className="text-3xl font-bold font-biorhyme text-orange-500">
-                  Daniel Reis
-                </h3>
-                <a
-                  href="https://www.instagram.com/danielreisaugusto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-orange-500 hover:text-orange-600 text-2xl"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-              </div>
-              {/* Destaques / Experiência */}
+            {/* Info Estratégica */}
+            <div className="p-8 flex flex-col justify-center md:w-2/3 text-left space-y-5">
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Destaques & Experiência</h4>
-                <ul className="list-disc list-inside text-gray-400 font-chivo space-y-1">
-                  <li>20 anos de mercado imobiliário</li>
-                  <li>Líder que formou mais de 1200 corretores</li>
-                  <li>1.5 bilhão em VGV</li>
-                  <li>Sócio fundador Home Class. (Imobiliária com 100 corretores no modelo digital posicionada para o alto padrão)</li>
-                  <li>Especialista em carreiras de alta performance</li>
-                  <li>Formação de líderes e diretores executivos</li>
-                  <li>Fundador Adão Vibe (VGB 404 Milhões)</li>
-                  <li>Ministrei mais de 700 treinamentos de vendas</li>
-                  <li>Inúmeras apresentações de rodadas de negócios</li>
-                  <li>Mentor de executivos para carreira</li>
-                  <li>Especialista em Vendas</li>
-                </ul>
+                <div className="flex items-center space-x-3 mb-2">
+                  <h3 className="text-3xl font-bold font-biorhyme text-orange-500">
+                    Daniel Reis
+                  </h3>
+                  <a href="https://www.instagram.com/danielreisaugusto" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 text-2xl">
+                    {/* <FontAwesomeIcon icon={faInstagram} /> */}
+                  </a>
+                </div>
+                {/* FOCO NO RESULTADO (Hook Inicial) */}
+                <p className="text-xl text-gray-200 font-chivo">
+                  O mentor por trás de <span className="font-bold text-white">$1.5 Bilhão em VGV</span> e da formação de mais de <span className="font-bold text-white">1200 corretores</span> de alta performance.
+                </p>
               </div>
 
-              {/* Formação */}
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Formação & Certificações</h4>
-                <ul className="list-disc list-inside text-gray-400 font-chivo space-y-1">
-                  <li>Graduação: Ciências Biológicas</li>
-                  <li>Fundação Dom Cabral</li>
-                  <li>Academia Internacional de Coach</li>
-                  <li>G4 Traction</li>
-                  <li>Benchmarking USA - Imersão mercado imobiliário</li>
-                  <li>Benchmarking SP - Mercado de luxo imobiliário</li>
-                  <li>Treinamentos de posicionamento - SP</li>
-                  <li>Treinamentos mercado de luxo - SP</li>
-                  <li>Treinamentos mercado de luxo - Miami</li>
-                </ul>
+                <h4 className="text-xl font-semibold text-white mb-2">O que você vai aprender com ele:</h4>
+                <p className="text-gray-400 font-chivo">
+                  Daniel vai te entregar as estratégias exatas que ele usou para construir carreiras de sucesso e negócios milionários no mercado imobiliário. Você aprenderá os métodos para criar desejo, acelerar negociações e liderar equipes que batem metas consistentemente.
+                </p>
               </div>
 
-              {/* Métodos e Conquistas */}
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Métodos & Conquistas</h4>
-                <ul className="list-disc list-inside text-gray-400 font-chivo space-y-2">
-                  <li>
-                    <strong>Método Antecipação de lançamento Fire</strong> —
-                    Crie desejo antes do lançamento e transforme expectativa em vendas imediatas.
-                  </li>
-                  <li>
-                    <strong>Método Venda de Alto Impacto</strong> —
-                    Técnicas que aceleram negociações e levam o cliente ao fechamento sem objeções.
-                  </li>
-                  <li>
-                    <strong>Método Luxury Cliente</strong> —
-                    Atenda clientes de alto luxo com exclusividade, sofisticação e experiências únicas.
-                  </li>
-                  <li>
-                    <strong>Método Performance+</strong> —
-                    Transforme sua equipe em uma máquina de vendas com foco em resultado real.
-                  </li>
-                  <li>
-                    <strong>Método Potencial Máximo</strong> —
-                    Descubra e explore o melhor de cada corretor, elevando sua performance ao topo.
-                  </li>
-                  <li>
-                    <strong>Método Líder Alfa</strong> —
-                    Formação de líderes que inspiram, engajam e conduzem times de alta performance.
-                  </li>
-                  <li>
-                    <strong>Método Executivo Visionário</strong> —
-                    Construa uma carreira sólida de diretor executivo com visão, autoridade e estratégia.
-                  </li>
-                  <li>
-                    <strong>Método Imobiliária Zero a Cem</strong> —
-                    Passo a passo para abrir e escalar uma imobiliária sólida e lucrativa do zero.
-                  </li>
-                  <li>
-                    <strong>Método Carreira 20/20</strong> —
-                    Como se manter por 20 anos no topo da carreira com performance consistente.
-                  </li>
-                  <li>
-                    <strong>Método DISC & Eneagrama Pro</strong> —
-                    Use ferramentas comportamentais para liderar corretores, gestores e executivos.
-                  </li>
-                  <li>
-                    <strong>Método RH 360°®</strong> —
-                    Transforme o RH da sua imobiliária em motor de crescimento e retenção de talentos.
-                  </li>
-                  <li>
-                    <strong>Método Executivo Imob®</strong> —
-                    Leve seu time ao próximo nível: de corretores comuns a executivos de impacto.
-                  </li>
+                <h4 className="text-xl font-semibold text-white mb-2">Principais Credenciais e Resultados:</h4>
+                <ul className="list-disc list-inside text-gray-400 font-chivo space-y-1">
+                  <li><span className="font-bold text-white">20 anos</span> de experiência no mercado imobiliário.</li>
+                  <li>Sócio fundador da <span className="font-bold">Home Class</span> (imobiliária digital de alto padrão).</li>
+                  <li>Ministrou mais de <span className="font-bold">700 treinamentos de vendas</span>.</li>
+                  <li>Formação executiva na <span className="font-bold">Fundação Dom Cabral</span> e <span className="font-bold">G4 Traction</span>.</li>
+                  <li>Imersões e Benchmarking nos mercados de luxo de <span className="font-bold">São Paulo e Miami (USA)</span>.</li>
                 </ul>
               </div>
             </div>
@@ -295,57 +276,38 @@ export default function Home() {
               />
             </div>
 
-            {/* Info */}
-            <div className="p-6 flex flex-col justify-start md:w-2/3 text-left space-y-6">
-              <div className="flex items-center space-x-3">
-                <h3 className="text-3xl font-bold font-biorhyme text-orange-500">
-                  Hugo Almeida
-                </h3>
-                <a
-                  href="https://www.instagram.com/eusouhugoalmeida"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-orange-500 hover:text-orange-600 text-2xl"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-              </div>
-              {/* Destaques / Experiência */}
+            {/* Info Estratégica */}
+            <div className="p-8 flex flex-col justify-center md:w-2/3 text-left space-y-5">
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Destaques & Experiência</h4>
-                <ul className="list-disc list-inside text-gray-400 font-chivo space-y-1">
-                  <li>Treinador de Líderes há 20 anos</li>
-                  <li>Professional & Personal Coach (AIC)</li>
-                  <li>Business and Executive Coach (AIC)</li>
-                  <li>Master Coach (AIC)</li>
-                  <li>Desenvolveu mais de 5.000 pessoas para atingirem seu máximo potencial</li>
-                  <li>Reconhecido em liderança, vendas e treinamento de alto impacto</li>
-                </ul>
+                <div className="flex items-center space-x-3 mb-2">
+                  <h3 className="text-3xl font-bold font-biorhyme text-orange-500">
+                    Hugo Almeida
+                  </h3>
+                  <a href="https://www.instagram.com/eusouhugoalmeida" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 text-2xl">
+                    {/* <FontAwesomeIcon icon={faInstagram} /> */}
+                  </a>
+                </div>
+                {/* FOCO NO RESULTADO (Hook Inicial) */}
+                <p className="text-xl text-gray-200 font-chivo">
+                  Especialista em <span className="font-bold text-white">Liderança Emocional</span> que já desenvolveu mais de <span className="font-bold text-white">5.000 pessoas</span> para a alta performance.
+                </p>
               </div>
 
-              {/* Formação */}
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Formação & Certificações</h4>
-                <ul className="list-disc list-inside text-gray-400 font-chivo space-y-1">
-                  <li>Graduado em Gestão Comercial (ESTÁCIO)</li>
-                  <li>MBA – Liderança Integral & Organizacional (FRANKLINCOVEY)</li>
-                  <li>Millionaire Mind Intensive (MMI)</li>
-                  <li>Unleash the Power Within - Londres (ING)</li>
-                  <li>Método Treinador Implacável (Grupo Karcher)</li>
-                  <li>Analista DISC (AIC)</li>
-                  <li>Treinador Experencial (Grupo Karcher)</li>
-                </ul>
+                <h4 className="text-xl font-semibold text-white mb-2">O que você vai aprender com ele:</h4>
+                <p className="text-gray-400 font-chivo">
+                  Hugo é o especialista que vai destravar seu potencial máximo. Ele vai te ensinar a usar a inteligência emocional para construir uma mentalidade inabalável, liderar com impacto e transformar seus medos em combustível para o sucesso em vendas.
+                </p>
               </div>
 
-              {/* Métodos e Conquistas */}
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Métodos & Conquistas</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">Principais Credenciais e Resultados:</h4>
                 <ul className="list-disc list-inside text-gray-400 font-chivo space-y-1">
-                  <li>Criador do método <strong>Vendedor de Sucesso</strong></li>
-                  <li>Criador do método Fortium - <strong>Liderança Emocional e Alta Performance</strong></li>
-                  <li>Criador do Método Aureum - <strong>Elite da Liderança Emocional e Estratégia</strong></li>
-                  <li>Criador do Método LeaderPRO - <strong>Professional Leadership</strong></li>
-                  <li>Criador do Método Level Up Day - <strong>Imersão Corporativa</strong></li>
+                  <li><span className="font-bold text-white">20 anos</span> como treinador de líderes e equipes comerciais.</li>
+                  <li><span className="font-bold">MBA em Liderança</span> Organizacional pela FranklinCovey.</li>
+                  <li>Criador dos métodos <span className="font-bold">Fortium (Liderança Emocional)</span> e <span className="font-bold">Vendedor de Sucesso</span>.</li>
+                  <li>Master Coach com certificação internacional (AIC).</li>
+                  <li>Imersão <span className="font-bold">"Unleash the Power Within"</span> com Tony Robbins em Londres.</li>
                 </ul>
               </div>
             </div>
@@ -417,24 +379,37 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* 8 e 9. Compra + Formulário */}
-      <section id="inscricao" className="py-14 px-6 bg-black text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-5 mt-0 font-biorhyme">
+      {/* 8 e 9. Compra + Formulário (Otimizado) */}
+      <section ref={formRef} id="inscricao" className="py-14 px-6 bg-black text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4 font-biorhyme">
           Garanta sua vaga agora
         </h2>
-        <form className="max-w-lg mx-auto bg-gray-900 p-8 rounded-xl space-y-4"
+
+        {/* CHAMADA FINAL ADICIONADA AQUI */}
+        <p className="text-2xl font-bold text-white mb-8 max-w-lg mx-auto">
+          Última Oportunidade: De <span className="line-through text-gray-400">R$ 897,00</span> por apenas <span className="text-orange-500">R$ 197,00</span>
+        </p>
+
+        <form
+          className="max-w-lg mx-auto bg-gray-900 p-8 rounded-xl space-y-4"
           onSubmit={handleSubmit}
         >
           <input type="text" placeholder="Nome completo" className="w-full p-3 rounded-lg text-black font-montserrat" required />
           <input type="email" placeholder="E-mail" className="w-full p-3 rounded-lg text-black font-montserrat" required />
           <input type="tel" placeholder="Telefone/WhatsApp" className="w-full p-3 rounded-lg text-black font-montserrat" required />
 
+          {/* BOTÃO COM CTA CLARO */}
           <button
             type="submit"
-            className="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-lg text-lg transition font-montserrat font-bold"
+            className="w-full bg-orange-500 hover:bg-orange-600 py-4 rounded-lg text-xl transition font-montserrat font-bold animate-pulse-cta"
           >
-            Enviar
+            Reservar Minha Vaga por R$ 197,00
           </button>
+
+          {/* PASSO CLARO (FUNIL) */}
+          <p className="text-sm text-gray-400 pt-2">
+            Após preencher, você será direcionado para a página de pagamento.
+          </p>
         </form>
 
         {showModal && (
@@ -498,6 +473,17 @@ export default function Home() {
           </div>
         )}
       </section>
+      {/* CTA FLUTUANTE CONDICIONAL */}
+      {!isFormVisible && (
+        <div className="fixed bottom-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-sm p-4 z-50 md:hidden">
+          <a
+            href="#inscricao"
+            className="w-full text-center inline-block bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl text-lg transition font-montserrat font-bold text-white shadow-lg animate-pulse-cta"
+          >
+            Garantir minha vaga agora!
+          </a>
+        </div>
+      )}
 
       {/* 10. Rodapé */}
       <footer className="bg-gray-900 py-6 text-center text-gray-400 font-montserrat space-y-2">
