@@ -235,7 +235,7 @@ export default function Home() {
                     Daniel Reis
                   </h3>
                   <a href="https://www.instagram.com/danielreisaugusto" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 text-2xl">
-                    {/* <FontAwesomeIcon icon={faInstagram} /> */}
+                    <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </div>
                 {/* FOCO NO RESULTADO (Hook Inicial) */}
@@ -284,7 +284,7 @@ export default function Home() {
                     Hugo Almeida
                   </h3>
                   <a href="https://www.instagram.com/eusouhugoalmeida" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600 text-2xl">
-                    {/* <FontAwesomeIcon icon={faInstagram} /> */}
+                    <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </div>
                 {/* FOCO NO RESULTADO (Hook Inicial) */}
@@ -307,7 +307,7 @@ export default function Home() {
                   <li><span className="font-bold">MBA em Liderança</span> Organizacional pela FranklinCovey.</li>
                   <li>Criador dos métodos <span className="font-bold">Fortium (Liderança Emocional)</span> e <span className="font-bold">Vendedor de Sucesso</span>.</li>
                   <li>Master Coach com certificação internacional (AIC).</li>
-                  <li>Imersão <span className="font-bold">"Unleash the Power Within"</span> com Tony Robbins em Londres.</li>
+                  <li>Imersão <span className="font-bold">&ldquo;Unleash the Power Within&rdquo;</span> com Tony Robbins em Londres.</li>
                 </ul>
               </div>
             </div>
