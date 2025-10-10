@@ -140,8 +140,8 @@ export default function Home() {
           Veja o que Daniel Reis e Hugo Almeida Vão Te Ensinar na Imersão:
         </h2>
         <div className="flex justify-center">
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm" poster="/images/DNA-FEED (3).png">
-            <source src="/videos/Videointro.mp4" type="video/mp4" />
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm">
+            <source src="/videos/Videonovo.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
         </div>
