@@ -68,7 +68,7 @@ export default function Home() {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.1, 
+      threshold: 0.1,
     };
 
     const observerCallback = (entries) => {
@@ -140,8 +140,8 @@ export default function Home() {
           Veja o que Daniel Reis e Hugo Almeida Vão Te Ensinar na Imersão:
         </h2>
         <div className="flex justify-center">
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm" poster="/images/DNA-FEED (3).png">
-            <source src="/videos/Videointro.mp4" type="video/mp4" />
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm">
+            <source src="/videos/Videonovo.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
         </div>
@@ -414,55 +414,25 @@ export default function Home() {
 
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center bg-black/70">
-            <div className="bg-white p-6 rounded-xl max-w-md w-full text-center space-y-1">
-              <h3 className="text-xl font-bold">Escolha sua forma de pagamento</h3>
+            <div className="bg-white p-6 rounded-xl max-w-md w-full text-center space-y-4">
+              <h3 className="text-xl font-bold text-gray-900">
+                Finalize sua inscrição pelo WhatsApp
+              </h3>
+
+              <p className="text-gray-700">
+                Clique no botão abaixo para falar conosco e concluir sua compra.
+              </p>
 
               <a
-                href="https://link.infinitepay.io/hugoalmeidacoach/VC1DLTEtSQ-27U2eP5Aw9-197,00"
+                href={`http://wa.me/5566996760856?text=${encodeURIComponent(
+                  "Olá! Quero confirmar minha inscrição no curso por R$ 197,00."
+                )}`}
                 target="_blank"
-                className="block w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-bold"
+                className="block w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-bold text-lg transition"
               >
-                Pagar com cartão
+                Ir para o WhatsApp
               </a>
 
-              {/* Pix */}
-              <div>
-                <p className="mb-1 font-semibold">Pagar com Pix</p>
-
-                {/* QR Code */}
-                <a
-                  href={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(pixKey)}`}
-                  target="_blank"
-                  className="block w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-bold"
-                >
-                  Abrir QR Code Pix
-                </a>
-
-                {/* Copiar chave Pix */}
-                <div className="flex justify-between items-center bg-gray-300 p-2 rounded-lg mt-1">
-                  <span className="text-xs break-all">{pixKey}</span>
-                  <button
-                    onClick={copyPix}
-                    className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-lg text-sm"
-                  >
-                    Copiar
-                  </button>
-                </div>
-
-                <p className="mt-2 text-sm text-gray-600">
-                  Ao efetuar pagamento por Pix, envie o comprovante via{" "}
-                  <a
-                    href={`https://wa.me/5562991426760?text=${encodeURIComponent(
-                      "Olá, enviei o comprovante do Pix."
-                    )}`}
-                    target="_blank"
-                    className="text-blue-600 underline"
-                  >
-                    WhatsApp
-                  </a>
-                  .
-                </p>
-              </div>
               <button
                 onClick={() => setShowModal(false)}
                 className="mt-4 text-gray-600 underline"
@@ -472,6 +442,7 @@ export default function Home() {
             </div>
           </div>
         )}
+
       </section>
       {/* CTA FLUTUANTE CONDICIONAL */}
       {!isFormVisible && (
