@@ -68,7 +68,7 @@ export default function Home() {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.1,
+      threshold: 0.1, 
     };
 
     const observerCallback = (entries) => {
@@ -140,8 +140,8 @@ export default function Home() {
           Veja o que Daniel Reis e Hugo Almeida Vão Te Ensinar na Imersão:
         </h2>
         <div className="flex justify-center">
-          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm">
-            <source src="/videos/Videonovo.mp4" type="video/mp4" />
+          <video ref={videoRef} controls className="rounded-xl w-full max-w-sm" poster="/images/DNA-FEED (3).png">
+            <source src="/videos/Videointro.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
           </video>
         </div>
@@ -413,35 +413,35 @@ export default function Home() {
         </form>
 
         {showModal && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/70">
-            <div className="bg-white p-6 rounded-xl max-w-md w-full text-center space-y-4">
-              <h3 className="text-xl font-bold text-gray-900">
-                Finalize sua inscrição pelo WhatsApp
-              </h3>
+  <div className="fixed inset-0 flex items-center justify-center bg-black/70">
+    <div className="bg-white p-6 rounded-xl max-w-md w-full text-center space-y-4">
+      <h3 className="text-xl font-bold text-gray-900">
+        Finalize sua inscrição pelo WhatsApp
+      </h3>
 
-              <p className="text-gray-700">
-                Clique no botão abaixo para falar conosco e concluir sua compra.
-              </p>
+      <p className="text-gray-700">
+        Clique no botão abaixo para falar conosco e concluir sua compra.
+      </p>
 
-              <a
-                href={`http://wa.me/5566996760856?text=${encodeURIComponent(
-                  "Olá! Quero confirmar minha inscrição no curso por R$ 197,00."
-                )}`}
-                target="_blank"
-                className="block w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-bold text-lg transition"
-              >
-                Ir para o WhatsApp
-              </a>
+      <a
+        href={`http://wa.me/5566996760856?text=${encodeURIComponent(
+          "Olá! Quero confirmar minha inscrição no curso por R$ 197,00."
+        )}`}
+        target="_blank"
+        className="block w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-bold text-lg transition"
+      >
+        Ir para o WhatsApp
+      </a>
 
-              <button
-                onClick={() => setShowModal(false)}
-                className="mt-4 text-gray-600 underline"
-              >
-                Fechar
-              </button>
-            </div>
-          </div>
-        )}
+      <button
+        onClick={() => setShowModal(false)}
+        className="mt-4 text-gray-600 underline"
+      >
+        Fechar
+      </button>
+    </div>
+  </div>
+)}
 
       </section>
       {/* CTA FLUTUANTE CONDICIONAL */}
