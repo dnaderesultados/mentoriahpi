@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Defina a data final da sua promoção aqui
-const COUNTDOWN_TARGET = new Date("2025-10-12T23:59:59");
+const COUNTDOWN_TARGET = new Date("2025-10-15T23:59:59");
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(null);

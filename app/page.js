@@ -118,7 +118,7 @@ export default function Home() {
 
         <ul className="space-y-3 text-lg font-chivo">
           <li className="text-2xl font-bold text-orange-400">
-            De <span className="line-through text-gray-400">R$ 897,00</span> por <span className="text-white">R$ 197,00</span>
+            De <span className="line-through text-gray-400">R$ 397,00</span> por <span className="text-white">R$ 197,00</span>
           </li>
           <li>
             <p className="text-lg font-bold text-yellow-400">
@@ -387,7 +387,7 @@ export default function Home() {
 
         {/* CHAMADA FINAL ADICIONADA AQUI */}
         <p className="text-2xl font-bold text-white mb-8 max-w-lg mx-auto">
-          Última Oportunidade: De <span className="line-through text-gray-400">R$ 897,00</span> por apenas <span className="text-orange-500">R$ 197,00</span>
+          Última Oportunidade: De <span className="line-through text-gray-400">R$ 397,00</span> por apenas <span className="text-orange-500">R$ 197,00</span>
         </p>
 
         <form
