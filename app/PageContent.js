@@ -408,8 +408,8 @@ export default function PageContent({ photos }) {
               </p>
 
               <a
-                href={`http://wa.me/5566996760856?text=${encodeURIComponent(
-                  "Olá! Quero confirmar minha inscrição no curso por R$ 197,00."
+                href={`http://wa.me/5562991426760?text=${encodeURIComponent(
+                  "Olá! Quero fazer a Mentoria."
                 )}`}
                 target="_blank"
                 className="block w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-bold text-lg transition"
