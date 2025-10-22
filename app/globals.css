@@ -5,7 +5,7 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --highlight: #f97316;
+  --highlight: #22C55E;
 
   --font-biorhyme: 'BioRhyme', serif;
   --font-chivo: 'Chivo', sans-serif;
@@ -39,7 +39,7 @@ body {
 @keyframes pulse-cta {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+    box-shadow: 0 0 0 0 rgba(15, 133, 58, 0.7);
   }
   50% {
     transform: scale(1.05);
@@ -49,4 +49,14 @@ body {
 
 .animate-pulse-cta {
   animation: pulse-cta 4s infinite;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #22c55e !important; /* Esta é a cor do seu text-green-500 */
+}
+
+/* Dica Bônus: Mudar a cor da bolinha de paginação ATIVA */
+.swiper-pagination-bullet-active {
+  background-color: #22c55e !important; /* Esta é a cor do seu bg-green-500 */
 }

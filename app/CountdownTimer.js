@@ -1,7 +1,8 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 
 // Defina a data final da sua promoção aqui
-const COUNTDOWN_TARGET = new Date("2025-10-15T23:59:59");
+const COUNTDOWN_TARGET = new Date("2025-11-07T23:59:59");
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(null);
@@ -28,8 +29,8 @@ const CountdownTimer = () => {
   if (!timeLeft) {
     return (
       <div className="bg-gray-800 p-4 rounded-lg inline-block mb-4 animate-pulse">
-        <p className="text-lg text-white font-montserrat mb-2">A OFERTA TERMINA EM:</p>
-        <div className="text-3xl font-bold text-orange-500 tracking-wider space-x-2">
+        <p className="text-lg text-white font-montserrat mb-2">TEMPO ATÉ A MENTORIA:</p>
+        <div className="text-3xl font-bold text-green-500 tracking-wider space-x-2">
           <span>--d</span> : <span>--h</span> : <span>--m</span> : <span>--s</span>
         </div>
       </div>
@@ -38,8 +39,8 @@ const CountdownTimer = () => {
 
   return (
     <div className="bg-gray-800 p-4 rounded-lg inline-block mb-4">
-      <p className="text-lg text-white font-montserrat mb-2">A OFERTA TERMINA EM:</p>
-      <div className="text-3xl font-bold text-orange-500 tracking-wider space-x-2">
+      <p className="text-lg text-white font-montserrat mb-2">TEMPO ATÉ A MENTORIA:</p>
+      <div className="text-3xl font-bold text-green-500 tracking-wider space-x-2">
         <span>{timeLeft.days.toString().padStart(2, '0')}d</span>
         <span>:</span>
         <span>{timeLeft.hours.toString().padStart(2, '0')}h</span>
