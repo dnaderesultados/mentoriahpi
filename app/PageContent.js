@@ -131,7 +131,7 @@ export default function PageContent({ photos }) {
       {/* 2. Informações principais ATUALIZADAS */}
       <section className="py-8 px-6 text-center bg-black">
         <h2 className="text-3xl md:text-4xl font-bold text-green-500 mb-4 font-biorhyme">
-          O Segredo do $1.5 Bilhão em VGV
+          O Segredo de $2 Bilhões em VGV
         </h2>
         <p className="text-xl md:text-2xl text-gray-200 mb-8 font-chivo max-w-3xl mx-auto">
           imersão de alta performance em estratégia, posicionamento, liderança e vendas, <span className="text-green-500">com 2 dias de conteúdo prático</span>, dinâmico e acompanhamento exclusivo.
@@ -244,7 +244,7 @@ export default function PageContent({ photos }) {
                 </div>
                 {/* FOCO NO RESULTADO (Hook Inicial) */}
                 <p className="text-xl text-gray-200 font-chivo">
-                  O mentor por trás de <span className="font-bold text-white">$1.5 Bilhão em VGV</span> e da formação de mais de <span className="font-bold text-white">1200 corretores</span> de alta performance.
+                  O mentor por trás de <span className="font-bold text-white">$2 Bilhões em VGV</span> e da formação de mais de <span className="font-bold text-white">1200 corretores</span> de alta performance.
                 </p>
               </div>
 
